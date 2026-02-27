@@ -15,6 +15,6 @@ SESSION_LOG.md
 kanji_stone_world.md
 学年別漢字配当表_現行2017改定.md
 image/
-scripts/all_new_questions.json
-scripts/gen_prompt_template.md
+scripts/
+public/data/ocr_review_candidates.json
 tsconfig.tsbuildinfo
