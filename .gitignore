@@ -1,0 +1,20 @@
+node_modules
+dist
+*.local
+.DS_Store
+.claude
+
+# Docs / planning (not needed for deployment)
+EXAM_ANALYSIS.md
+IMAGE_CREDITS.md
+IMPLEMENTATION_PLAN_visual_overhaul.md
+MINERAL_REVIEW.md
+PROPOSAL.md
+PROPOSAL_ChatGPT.md
+SESSION_LOG.md
+kanji_stone_world.md
+学年別漢字配当表_現行2017改定.md
+image/
+scripts/all_new_questions.json
+scripts/gen_prompt_template.md
+tsconfig.tsbuildinfo
