@@ -84,7 +84,7 @@ function KanjiSpecimenGrid({
     <div
       style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(48px, 1fr))',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(42px, 1fr))',
         gap: 6,
       }}
     >
@@ -93,8 +93,8 @@ function KanjiSpecimenGrid({
           key={s.kanji}
           onClick={() => onSelect(s)}
           style={{
-            width: 48,
-            height: 48,
+            width: 42,
+            height: 42,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -150,8 +150,8 @@ function KanjiSpecimenModal({
           background: 'var(--bg-surface)',
           borderRadius: 'var(--radius)',
           padding: 24,
+          width: '90vw',
           maxWidth: 320,
-          width: '100%',
           border: `1px solid ${statusColor}44`,
           boxShadow: `0 0 30px ${statusColor}22, 0 8px 32px rgba(0,0,0,0.4)`,
         }}

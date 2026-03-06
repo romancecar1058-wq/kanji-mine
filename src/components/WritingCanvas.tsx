@@ -17,8 +17,8 @@ export default function WritingCanvas({ question, layerScene, onSubmit }: Writin
   const [selfScore, setSelfScore] = useState<SelfScore | null>(null);
   const startTime = useRef(Date.now());
 
-  // Canvas setup
-  useEffect(() => {
+  // Canvas setup helper
+  const setupCanvas = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const dpr = window.devicePixelRatio || 1;
@@ -48,7 +48,23 @@ export default function WritingCanvas({ question, layerScene, onSubmit }: Writin
     ctx.strokeStyle = '#1a1a2e';
     ctx.lineWidth = 4;
     ctx.setLineDash([]);
-  }, [question.id]);
+  }, []);
+
+  // Canvas setup on mount and question change
+  useEffect(() => {
+    setupCanvas();
+  }, [question.id, setupCanvas]);
+
+  // ResizeObserver to handle responsive canvas
+  useEffect(() => {
+    const container = canvasRef.current?.parentElement;
+    if (!container) return;
+    const ro = new ResizeObserver(() => {
+      if (phase === 'write') setupCanvas();
+    });
+    ro.observe(container);
+    return () => ro.disconnect();
+  }, [phase, setupCanvas]);
 
   const getPoint = useCallback((e: React.PointerEvent) => {
     const canvas = canvasRef.current!;

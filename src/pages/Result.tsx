@@ -70,7 +70,7 @@ export default function Result({ answers, questions, mode, navigate, appState, b
             {isGreat ? '✨' : isGood ? '💎' : '🪨'}
           </span>
         </div>
-        <p style={{ fontSize: '2.5rem', fontWeight: 700 }}>
+        <p style={{ fontSize: 'clamp(1.8rem, 8vw, 2.5rem)', fontWeight: 700 }}>
           <span style={{ color: isGood ? 'var(--success)' : 'var(--accent-warm)' }}>
             {correctCount}
           </span>

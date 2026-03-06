@@ -110,8 +110,8 @@ export default function Home({ state, navigate, debugFlags, onSetDebugFlags, all
           </div>
         </div>
 
-        <h1 style={{ fontSize: '2rem', margin: '0 0 4px', color: '#3d2810' }}>
-          <span className="anim-float" style={{ display: 'inline-block', fontSize: '2.4rem' }}>⛏</span>
+        <h1 style={{ fontSize: 'clamp(1.5rem, 5vw, 2rem)', margin: '0 0 4px', color: '#3d2810' }}>
+          <span className="anim-float" style={{ display: 'inline-block', fontSize: 'clamp(1.8rem, 6vw, 2.4rem)' }}>⛏</span>
           {' '}
           <span style={{
             textShadow: '0 2px 8px rgba(240,176,80,0.3)',
@@ -364,7 +364,7 @@ export default function Home({ state, navigate, debugFlags, onSetDebugFlags, all
             WebkitBackdropFilter: 'blur(3px)',
           }}
         >
-          <div onClick={e => e.stopPropagation()} style={{ width: '100%', maxWidth: 560 }}>
+          <div onClick={e => e.stopPropagation()} style={{ width: '90vw', maxWidth: 560 }}>
             <SettingsSection
               debugFlags={debugFlags}
               onSetDebugFlags={onSetDebugFlags}
@@ -397,7 +397,7 @@ export default function Home({ state, navigate, debugFlags, onSetDebugFlags, all
           <div
             className="card fade-in"
             style={{
-              width: '100%',
+              width: '90vw',
               maxWidth: 460,
               background: 'rgba(53, 40, 32, 0.95)',
               border: '1px solid rgba(240,176,80,0.2)',
@@ -549,7 +549,7 @@ function SettingsSection({
         <button
           onClick={onClose}
           className="btn-ghost"
-          style={{ minHeight: 36, padding: '6px 10px', color: 'var(--text-dim)' }}
+          style={{ minHeight: 44, padding: '6px 10px', color: 'var(--text-dim)' }}
         >
           閉じる
         </button>

@@ -127,7 +127,7 @@ export default function QuizCard({ question, layerScene, onSubmit }: QuizCardPro
         </p>
         <p
           style={{
-            fontSize: '1.6rem',
+            fontSize: 'clamp(1.3rem, 4vw, 1.6rem)',
             fontWeight: 700,
             lineHeight: 1.6,
             color: layerScene.textColor ?? 'var(--text)',

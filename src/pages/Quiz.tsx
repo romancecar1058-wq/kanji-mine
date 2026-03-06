@@ -50,8 +50,8 @@ export default function Quiz({ allQuestions, appState, mode, layerDepth, onCompl
     <div
       className={ambientClass}
       style={{
-        margin: '-20px -24px',
-        padding: '20px 24px 28px',
+        margin: 'calc(-20px - env(safe-area-inset-top, 0px)) calc(-24px - env(safe-area-inset-right, 0px)) 0 calc(-24px - env(safe-area-inset-left, 0px))',
+        padding: 'calc(20px + env(safe-area-inset-top, 0px)) calc(24px + env(safe-area-inset-right, 0px)) 28px calc(24px + env(safe-area-inset-left, 0px))',
         minHeight: '100vh',
         background: layerScene.readabilityMask
           ? `${layerScene.readabilityMask}, ${layerScene.bgGradient}`

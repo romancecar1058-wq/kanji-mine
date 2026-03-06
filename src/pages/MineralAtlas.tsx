@@ -89,7 +89,7 @@ export default function MineralAtlas({ state, navigate, allQuestions, debug, deb
 
       {/* Mineral collection */}
       <h3 style={{ fontSize: '1.15rem', marginBottom: 12 }}>標本棚</h3>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12, marginBottom: 28 }}>
+      <div className="mineral-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12, marginBottom: 28 }}>
         {MINERALS.map(m => {
           const count = minerals[m.type];
           const isCollected = debug || count > 0;
@@ -306,8 +306,8 @@ function MineralDetail({
           background: 'var(--bg-surface)',
           borderRadius: 'var(--radius)',
           padding: 24,
+          width: '90vw',
           maxWidth: 400,
-          width: '100%',
           maxHeight: '85vh',
           overflowY: 'auto',
           border: `1px solid ${isCollected ? m.color + '44' : 'rgba(255,255,255,0.1)'}`,
